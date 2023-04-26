@@ -1,0 +1,84 @@
+@use "../../../styles/mixin.scss" as mixin;
+
+
+.popover {
+
+    position: fixed;
+
+
+
+    transition: 0.15s ease-in,
+        top 0.35s ease-in-out,
+        left 0.1s ease-in-out,
+        opacity 0.29s ease-in !important;
+
+    &__tilt {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: mixin.$quaternary;
+
+
+
+        padding: 5px;
+        padding-top: 10px;
+        height: 250px;
+        width: 190px;
+        box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.21);
+        border: 2px solid rgba(174, 174, 174, 0.79);
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        transition: 0.04s ease-in-out;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -27px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid mixin.$quaternary;
+            // border-radius: 0 0 5px 5px;
+
+        }
+
+        &__element {
+            font-weight: 100;
+            padding: 10px;
+            padding-left: 10px;
+
+            &__text {
+                color: mixin.$secondary;
+                cursor: pointer;
+                font-size: small;
+                pointer-events: none;
+                user-select: none;
+                // @include mixin.fadeInPopover;
+            }
+
+        }
+    }
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+$primary: rgba(53, 53, 53, 1);
+$primary_80_transparent: rgba(53, 53, 53, 0.8);
+$primary_95_transparent: rgba(53, 53, 53, 0.95);
+$secondary: rgb(35, 17, 35);
+$secondary80: rgba(35, 17, 35, 0.8);
+
+$tertiary: rgba(233, 79, 55, 1);
+$quaternary: rgba(231, 223, 232, 1);
+$quaternary60: rgba(231, 223, 232, 0.87);
+
+$light_blue: rgba(236, 248, 248, 1);
+$primary_text_color: rgba(246, 247, 235, 1);
+$fontFamily400: 'Ubuntu', sans-serif;
+$fontFamily200: 'Ubuntu', sans-serif;
+
+
+@mixin fadeInPopover {
+    animation-name: fadeIn;
+    animation-duration: 0.15s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: rotateX(20deg) rotateY(-20deg);
+
+    }
+
+    to {
+        color: black;
+        opacity: 1;
+        transform: rotateX(0) rotateY(0);
+    }
+}

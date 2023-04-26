@@ -1,0 +1,27 @@
+:root {
+    --padding-x-small: 6%;
+    --padding-x-medium: 7%;
+    --padding-x-large: 10%;
+
+    --padding-y-small: 0;
+    --padding-y-medium: 0;
+    --padding-y-large: 0;
+
+}
+
+.container {
+    transition: 0.2s;
+    padding: var(--padding-y-small) var(--padding-x-small) var(--padding-y-small) var(--padding-x-small);
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding: var(--padding-y-medium) var(--padding-x-medium) var(--padding-y-medium) var(--padding-x-medium);
+    }
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding: var(--padding-y-large) var(--padding-x-large) var(--padding-y-large) var(--padding-x-large);
+    }
+}
